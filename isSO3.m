@@ -1,4 +1,4 @@
-function flagSO3 = isSO3(R,varargin)
+function [flagSO3, varargout] = isSO3(R,varargin)
 % function to check if the given matrix
 % is a rotation matrix.
 %
@@ -24,6 +24,10 @@ if check < errorTol
     flagSO3 = true;
 else
     flagSO3 = false;
+end
+
+if nargout > 1
+    varargout{1} = check;
 end
 
 end

@@ -1,6 +1,10 @@
 function R = RPYtoRot_ZXY(phi,theta,psi)
 %written by Daniel Mellinger
+% inputs: roll, pitch, yaw
+% outputs: Rotation Matrix 
+%           roll-pitch-yaw to Rotation Matrix               
 
+%%
 % BRW = [ cos(psi)*cos(theta) - sin(phi)*sin(psi)*sin(theta), 
 %     cos(theta)*sin(psi) + cos(psi)*sin(phi)*sin(theta), -cos(phi)*sin(theta)]
 % 

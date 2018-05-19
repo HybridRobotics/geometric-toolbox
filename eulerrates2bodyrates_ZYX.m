@@ -10,4 +10,6 @@ for i = 1:3
     end
 end
 
+% dR = R*hat(Omega)
+% Omega = vee(R'*dR)
 Omega = vee(simplify(R'*dR))

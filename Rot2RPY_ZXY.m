@@ -20,13 +20,18 @@ end
 R = R';
 phi = asin(R(2,3));
 
-if cos(phi) < 1e-6
+if cos(phi) < 0
     keyboard;
 end
 
-psi = atan2(-R(2,1)/cos(phi),R(2,2)/cos(phi));
-theta = atan2(-R(1,3)/cos(phi),R(3,3)/cos(phi));
+try
+    psi = atan2(-R(2,1)/cos(phi),R(2,2)/cos(phi));
+catch ME
+   keyboard;
+   rethrow(ME)
+end 
 
+theta = atan2(-R(1,3)/cos(phi),R(3,3)/cos(phi));
 rpy = [phi; theta; psi];
 
 end

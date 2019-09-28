@@ -5,10 +5,10 @@ Contains all the functions (such as hat map, vee map, rotations, transport map, 
 
     + geometrytoolbox     # namespace
     ├── +rotation/SO3
-    |   ├── +error
+    |   ├── +variation
     |   |   ├── state.m   # eta
     |   |   ├── angvel.m  # delta-Omega
-    |   ├── +variation
+    |   ├── +error
     |   |   ├── state.m   # eR
     |   |   ├── angvel.m  # eOmega
     |   |   ├── config.m  # PsiR
@@ -22,10 +22,10 @@ Contains all the functions (such as hat map, vee map, rotations, transport map, 
     |   ├── zdeg.m
     |   └── ...    
     ├── +unitvector/S2
-    |   ├── +error
+    |   ├── +variation
     |   |   ├── state.m   # xi
     |   |   ├── angvel.m  # delta-omega
-    |   ├── +variation
+    |   ├── +error
     |   |   ├── state.m   # eq
     |   |   ├── angvel.m  # eomega
     |   |   ├── config.m  # Psiq

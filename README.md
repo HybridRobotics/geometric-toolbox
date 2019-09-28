@@ -35,9 +35,6 @@ Contains all the functions (such as hat map, vee map, rotations, transport map, 
     ├── cross.m
     ├── hat.m
     ├── vee.m
-    
-    │   └── ...                 # etc.
+    │   
     └── ...
 
-=
-      

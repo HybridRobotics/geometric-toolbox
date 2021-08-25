@@ -1,57 +1,26 @@
 %***********************************************************************
-
-%
-
 %       CONVERTS A RANDOMLY SAMPLED SIGNAL SET INTO AN EVENLY SAMPLED
-
 %       SIGNAL SET (by interpolation)
-
 %       
-
 %	By	:	Haldun KOMSUOGLU
-
 %	Start	:	07/23/1999
-
 %	Last	:	07/23/1999
-
 %	Statue  :	Neural Model Research Material
-
-%	
-
 %	Inputs:	
-
 %              t : A column vector that contains the time values for the
-
 %                  corresponding computed state trajectory points
-
 %              x : A matrix in which each row is a state value on the 
-
 %                  solution trajectory that corresponds to the time value in
-
 %                  vector t with the same row value. Format of each row:
-
 %                          row = [x1 x2 ... xN]
-
 %              Fs: The sampling frequency (1/sec) for the evenly sampled 
-
 %                  set to be generated.
-
-%
-
 %       Outputs:
-
 %              Et : Even sampling instants. This is a column vector in the
-
 %                   same format with "t".
-
 %              Ex : A matrix of the same form with "x" that contains the
-
 %                   state values corresponding to the time instants in Et
-
-%
-
 %***********************************************************************
-
 function [Et, Ex] = even_sample(t, x, Fs, type)
     if nargin < 3, Fs = 250; end
     if nargin < 4, type = 'spline'; end

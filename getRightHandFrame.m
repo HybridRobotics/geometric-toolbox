@@ -1,6 +1,8 @@
-function R = b3toR(b3,varargin)
+function R = getRightHandFrame(b1d, b3,varargin)
 
-b1d = [1; 0; 0];
+if norm(cross(b3,b1d)) == 0
+    b1d = [0; 1; 0];
+end
 
 b1 = -(vec_cross(b3,vec_cross(b3,b1d)))/norm(vec_cross(b3,b1d));
 b2 = vec_cross(b3,b1);
